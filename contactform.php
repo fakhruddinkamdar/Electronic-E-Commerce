@@ -4,9 +4,8 @@ if(isset($_REQUEST['submit'])) {
  // Checking for Empty Fields
  if(($_REQUEST['name'] == "") || ($_REQUEST['subject'] == "") || ($_REQUEST['email'] == "") || ($_REQUEST['message'] == "")){
   // msg displayed if required field missing
-
   $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
-  
+
  } else {
  $name = $_REQUEST['name'];
  $subject = $_REQUEST['subject'];
@@ -24,7 +23,7 @@ if(isset($_REQUEST['submit'])) {
 ?>
 
 <!--Start Contact Us Row-->
-<div class="col-md-8">
+<div class="col-md-10">
  <!--Start Contact Us 1st Column-->
  <form action="" method="post">
   <input type="text" class="form-control" name="name" placeholder="Name"><br>
