@@ -21,7 +21,7 @@
 <title>EH</title>
 
  <style>
-   
+
   .carousel-inner img {
       width: 100%;
       height: 100%;
@@ -40,7 +40,7 @@
     <div class="collapse navbar-collapse" id="myMenu">
       <ul class="navbar-nav pl-5 custom-nav">
         <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-        
+
         <li class="nav-item"><a href="#registration" class="nav-link">Registration</a></li>
         <li class="nav-item"><a href="Requester/RequesterLogin.php" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
@@ -48,7 +48,7 @@
     </div>
   </nav> <!-- End Navigation -->
 
- 
+
 <div id="demo" class="carousel slide " data-ride="carousel">
 
   <!-- Indicators -->
@@ -66,14 +66,14 @@
      <div class="carousel-item">
       <img src="images/Banner11.jpg" alt="Chicago">
     </div>
-   
+
     <div class="carousel-item">
       <img src="images/Banner9.jpg" alt="Chicago">
-    </div> 
-   
+    </div>
+
   </div>
 
-  
+
 
   <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -94,7 +94,7 @@
       <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
       <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
     </div>
-  </header> <!-- End Header Jumbotron --> 
+  </header> <!-- End Header Jumbotron -->
 
   <div class="container">
     <!--Introduction Section-->
@@ -122,7 +122,7 @@
   </div>
   <!--Introduction Section End-->
   <!-- Start Services -->
-  
+
   <!-- Start Registration  -->
   <?php include('userRegistration.php') ?>
   <!-- End Registration  -->
@@ -185,13 +185,12 @@
    <h3 id="Contact"></h3>
     <!--Start Contact Us Container-->
     <h2 class="text-center mb-4">Contact US</h2> <!-- Contact Us Heading -->
-    <div class="container mr-5 text-center"> 
+    <div class="container mr-2 text-center">
       <!--Start Contact Us Row-->
-      <?php include('contactform.php'); ?> 
+      <?php include('contactform.php'); ?>
       <!-- End Contact Us 1st Column -->
     </div>
-      
-    
+
   <!-- End Contact Us -->
 
   <!-- Start Footer-->
