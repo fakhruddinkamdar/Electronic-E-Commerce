@@ -1,24 +1,27 @@
 <?php
+
 // The contact Us Form wont work with Local Host but it will work on Live Server
 if(isset($_REQUEST['submit'])) {
+
  // Checking for Empty Fields
  if(($_REQUEST['name'] == "") || ($_REQUEST['subject'] == "") || ($_REQUEST['email'] == "") || ($_REQUEST['message'] == "")){
-  // msg displayed if required field missing
-  $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+
+    // msg displayed if required field missing
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
 
  } else {
- $name = $_REQUEST['name'];
- $subject = $_REQUEST['subject'];
- $email = $_REQUEST['email'];
- $message = $_REQUEST['message'];
+    $name = $_REQUEST['name'];
+    $subject = $_REQUEST['subject'];
+    $email = $_REQUEST['email'];
+    $message = $_REQUEST['message'];
 
- $mailTo = "contact@abc.com";
- $headers = "From: ". $email;
- $txt = "You have received an email from ". $name. ".\n\n".$message;
- mail($mailTo, $subject, $txt, $headers);
- $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Sent Successfully </div>';
+    $mailTo = "contact@abc.com";
+    $headers = "From: ". $email;
+    $txt = "You have received an email from ". $name. ".\n\n".$message;
+    mail($mailTo, $subject, $txt, $headers);
+    $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Sent Successfully </div>';
 
-}
+ }
 }
 ?>
 
