@@ -10,7 +10,7 @@
 	if($_SESSION['is_login']) {
  		$rEmail = $_SESSION['rEmail'];
 	} else {
- 		echo "<script> location.href='RequesterLogin.php'; </script>";
+ 	    echo "<script> location.href='RequesterLogin.php'; </script>";
 	}
 
 ?>
@@ -19,9 +19,11 @@
 	$d2="Redmi";
 	$sql="select * from uploadproduct where brand like '%$d2'";
 	$result=mysqli_query($conn,$sql);
-	if($result->num_rows>0)
-	{
+
+	if($result->num_rows > 0) {
+
 		while($row=mysqli_fetch_assoc($result)) {
+
 			$id=$row['id'];
 			$img=$row['product_image'];
 			$price=$row['product_price'];
@@ -36,7 +38,6 @@
 				<?php echo "<img src='../Admin/$img' height='150px' width='150px' class='product-img'>";?></center>
 				<br/>
 				<h3 align="center"><?php echo $price; ?></h3>
-
 				<h3 align="center"><?php echo $brand; ?></h3>
 
 				<center><a href="b.php?id=<?php echo $id;?>" class="btn btn-success"> Buy now</a></center>
