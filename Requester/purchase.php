@@ -1,13 +1,16 @@
 <?php
 define('TITLE', 'Purchase');
 define('PAGE', 'Purchase');
+
 include('includes/header.php');
 include('../dbConnection.php');
+
 session_start();
-if($_SESSION['is_login']){
- $rEmail = $_SESSION['rEmail'];
+
+if($_SESSION['is_login']) {
+	$rEmail = $_SESSION['rEmail'];
 } else {
- echo "<script> location.href='RequesterLogin.php'; </script>";
+	echo "<script> location.href='RequesterLogin.php'; </script>";
 }
 
 

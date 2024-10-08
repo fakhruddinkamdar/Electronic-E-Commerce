@@ -26,9 +26,9 @@
   }
 ?>
 <div class="container pt-5" id="registration">
-  <h2 class="text-center">Create an Account</h2>
+  <h2 class="text-center" style="margin-top: 50px;">Create an Account</h2>
   <div class="row mt-4 mb-4">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3 shadow-lg p-2 rounded">
       <form action="" class="shadow-lg p-4" method="POST">
         <div class="form-group">
           <i class="fas fa-user"></i><label for="name" class="pl-2 font-weight-bold">Name</label><input type="text"
@@ -45,7 +45,7 @@
             Password</label><input type="password" class="form-control" placeholder="Password" name="rPassword">
         </div>
         <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
-        <em style="font-size:10px;">Note - By clicking Sign Up, you agree to our Terms, Data
+        <em style="font-size:10px; font-weight: bold;">Note - By clicking Sign Up, you agree to our Terms, Data
           Policy and Cookie Policy.</em>
         <?php if(isset($regmsg)) {echo $regmsg; } ?>
       </form>
