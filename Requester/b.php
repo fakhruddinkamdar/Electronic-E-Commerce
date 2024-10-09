@@ -26,23 +26,18 @@ $row=mysqli_fetch_assoc($result);
 		$price=$row['product_price'];
 		$cat=$row['product_category'];
 		$brand=$row['Brand'];
-?>		
-	
-					
-					
+?>
+
+
+
 						<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:50px; padding:16px;margin-bottom:10px;" align="center">
 						<?php echo "<img src='../Admin/$img' width='150px' height='150px' >";?>
 
-						
+
 						<h4 align="center"> Name:<?php echo $name; ?></h4>
-						
+
 						<h4 align="center"> Price:<?php echo $price; ?></h4>
 						<h4 align="center"> Brand:<?php echo $brand; ?></h4>
-						
-						
-					
-
-						
 
 					</div>
 					<form  action="" method="post">
@@ -85,9 +80,9 @@ $row=mysqli_fetch_assoc($result);
 					    $state=$_REQUEST['state'];
 						$mno=$_REQUEST['mno'];
 						$pin=$_REQUEST['pin'];
-						
+
 						$sql="insert into sell(Pname,brand,cat,price,Cname,address,city,state,mobileno,pincode)values('$name','$brand','$cat','$price','$n1','$add','$city','$state','$mno','$pin')";
-						
+
 						if($conn->query($sql) == TRUE)
 						{
 							echo "<script>alert('Your Product will be delivered Soon')</script>";
@@ -98,9 +93,9 @@ $row=mysqli_fetch_assoc($result);
 						}
 					}
 					?>
-					
+
 			</div>
-			
+
 
 	<div class="container">
 		<h1 align="center">Brands</h1>
@@ -112,5 +107,5 @@ $row=mysqli_fetch_assoc($result);
 
 
 <?php
-include('includes/footer.php'); 
+include('includes/footer.php');
 ?>

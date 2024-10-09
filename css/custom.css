@@ -88,10 +88,25 @@ fi-color:hover {
 .service-para {
   text-align: justify;
   margin-top: 20px;
+  font-size: medium;
+  text-wrap: balance;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .product-img {
-  margin: 10px;
   border-radius: 10px;
-  background-color: lightgray
+  background-color: lightgray;
+}
+
+.product-table {
+  border-width: 4px;
+  border-radius: 10px;
+  border-color: #DC3545;
+  background-color: lightgray;
+  margin-top: 20px;
+}
+
+.service-title {
+  text-align: center;
+  font-weight: bold;
 }

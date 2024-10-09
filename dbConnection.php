@@ -8,8 +8,6 @@ $db_name = 'osms_db';
 $conn = new mysqli($db_host, $db_user, $db_password, $db_name);
 
 // Check Connection
-if($conn->connect_error)
-{
- die("connection failed");
-}
+if($conn -> connect_error)
+    die("connection failed");
 ?>

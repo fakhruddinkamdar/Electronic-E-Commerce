@@ -42,7 +42,7 @@
   </nav> <!-- End Navigation -->
 
 
-<div id="demo" class="carousel slide " data-ride="carousel">
+  <div id="demo" class="carousel slide " data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -51,61 +51,53 @@
       <li data-target="#demo" data-slide-to="2"></li>
     </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item back-image active">
-      <img class="carousel-img" src="images/Banner10.jpg" alt="Los Angles">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item back-image active">
+        <img class="carousel-img" src="images/Banner10.jpg" alt="Los Angles">
+      </div>
+      <div class="carousel-item">
+        <img class="carousel-img" src="images/Banner11.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img class="carousel-img" src="images/Banner12.jpg" alt="Chicago">
+      </div>
+
     </div>
-     <div class="carousel-item">
-      <img class="carousel-img" src="images/Banner11.jpg" alt="Chicago">
-    </div>
-    <div class="carousel-item">
-      <img class="carousel-img" src="images/Banner12.jpg" alt="Chicago">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <div class="slider">
+        <span class="carousel-control-prev-icon" style="margin-top:5px"></span>
+      </div>
+    </a>
+
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <div class="slider">
+        <span class="carousel-control-next-icon" style="margin-top:5px"></span>
+      </div>
+    </a>
 
   </div>
 
 
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <div class="slider">
-      <span class="carousel-control-prev-icon" style="margin-top:5px"></span>
-    </div>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <div class="slider">
-      <span class="carousel-control-next-icon" style="margin-top:5px"></span>
-    </div>
-  </a>
-
-
-</div>
- <!-- Start Header Jumbotron-->
-<!--  <header class="jumbotron back-image" style="background-image: url(images/Banner1.jpeg);">
-    <div class="myclass mainHeading">
-      <h1 class="text-uppercase text-danger font-weight-bold">Welcome to OSMS</h1>
-      <p class="font-italic">Customer's Happiness is our Aim</p>
-      <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
-      <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
-    </div>
-  </header> -->
-  <!-- End Header Jumbotron -->
-
   <div class="container">
     <!--Introduction Section-->
     <div class="jumbotron" style="margin-top: 20px; border-radius: 20px;">
-      <h3 class="text-center">Our Services</h3>
-      <p class="service-para">
-        Online Electronic Centre is India’s leading chain of multi-brand Electronics and Electrical service
-        workshops offering wide array of services. We focus on enhancing your uses experience by offering world-class
-        Electronic Appliances maintenance services. Our sole mission is “To provide Electronic Appliances care
-        services to keep the devices fit and healthy and customers happy and smiling”.
+      <h3 class="service-title">Our Services</h3>
+      <p >
+        <p class="service-para">
+          Online Electronic Centre is India’s <b>one-stop-shop</b> for leading chain of <b>multi-brand Electronics and Electrical service
+          workshops offering wide array of services.</b> We focus on enhancing your uses experience by <b>offering world-class
+          Electronic Appliances maintenance services.</b> Our sole mission is <b>“To provide Electronic Appliances care
+          services to keep the devices fit and healthy and customers happy and smiling”.</b><br/>
 
-        With well-equipped Electronic Appliances service centres and fully trained mechanics, we
-        provide quality services with excellent packages that are designed to offer you great savings.
+          With well-equipped Electronic Appliances service centres and fully trained mechanics, we
+          provide quality services with excellent packages that are designed to offer you great savings.
 
-        Our state-of-art workshops are conveniently located in many cities across the country. Now you
-        can book your service online by doing Registration.
+          Our state-of-art workshops are conveniently located in many cities across the country. Now you
+          can book your service online by doing Registration.
+        </p>
       </p>
 
     </div>
@@ -182,7 +174,7 @@
    <h3 id="Contact"></h3>
 
    <!--Start Contact Us Container-->
-    <h2 class="text-center mb-4">Contact US</h2> <!-- Contact Us Heading -->
+    <h2 class="text-center mb-4" style="margin-top: 120px;">Contact Us</h2> <!-- Contact Us Heading -->
     <div class="container mr-2 text-center">
 
     <!--Start Contact Us Row-->
@@ -196,9 +188,9 @@
   <!-- Start Footer-->
   <footer class="container-fluid bg-dark text-white mt-5" style="border-top: 3px solid #DC3545;">
 
-  <div class="container" >
+    <div class="container" >
 
-  <!-- Start Footer Container -->
+    <!-- Start Footer Container -->
       <div class="row py-3">
 
       <!-- Start Footer Row -->

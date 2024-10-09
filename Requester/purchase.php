@@ -1,13 +1,16 @@
 <?php
 define('TITLE', 'Purchase');
 define('PAGE', 'Purchase');
+
 include('includes/header.php');
 include('../dbConnection.php');
+
 session_start();
-if($_SESSION['is_login']){
- $rEmail = $_SESSION['rEmail'];
+
+if($_SESSION['is_login']) {
+	$rEmail = $_SESSION['rEmail'];
 } else {
- echo "<script> location.href='RequesterLogin.php'; </script>";
+	echo "<script> location.href='RequesterLogin.php'; </script>";
 }
 
 
@@ -29,7 +32,7 @@ if($_SESSION['is_login']){
 
 		<!--<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:50px; padding:16px;margin-bottom:10px;width:500px !important;float:left;margin-right:2px;" align="center">!-->
 
-		<table width="300" border="0" cellpadding="20" class="product-img">
+		<table width="300" border="0" cellpadding="20" style="margin-top: 30px;" class="product-table">
 		<tr>
 		<td align="center" valign="center">
 
