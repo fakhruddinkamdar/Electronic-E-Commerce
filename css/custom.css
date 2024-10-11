@@ -36,6 +36,8 @@ a {
 .active {
   color: white;
   background-color: #DC3545;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 a:hover {
@@ -93,20 +95,29 @@ fi-color:hover {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.product-img {
+.product {
   border-radius: 10px;
-  background-color: lightgray;
+  background-color: lavender;
+  margin: 10px;
+  padding: 4px;
 }
 
-.product-table {
-  border-width: 4px;
+.product img {
   border-radius: 10px;
-  border-color: #DC3545;
-  background-color: lightgray;
-  margin-top: 20px;
+  margin: 2px;
+  padding: 4px;
+}
+
+.product-list {
+  display: contents;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
 }
 
 .service-title {
   text-align: center;
   font-weight: bold;
+}
+
+.sidebar {
+  border-bottom-right-radius: 20px;
 }

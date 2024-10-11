@@ -70,7 +70,7 @@ if(isset($_REQUEST['submitrequest'])) {
 }
 
 ?>
-<div class="col-sm-9 col-md-10 mt-5">
+<div class="col-sm-9 col-md-10 mt-2">
 
   <form class="mx-5" action="" method="POST">
 

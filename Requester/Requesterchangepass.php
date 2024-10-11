@@ -43,7 +43,7 @@ if(isset($_REQUEST['passupdate'])) {
   <div class="row">
     <div class="col-sm-6">
 
-      <form class="mt-5 mx-5" method="POST">
+      <form class="mt-2 mx-5" method="POST">
         <div class="form-group">
           <label for="inputEmail">Email</label>
           <input type="email" class="form-control" id="inputEmail" value=" <?php echo $rEmail ?>" readonly>
