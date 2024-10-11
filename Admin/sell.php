@@ -10,27 +10,27 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
 	$aEmail = $_SESSION['aEmail'];
 } else {
-	echo "<script> location.href='login.php'; </script>";
+	echo "<script> location.href='index.php'; </script>";
 }
 ?>
 
-<div class="col-sm-9 col-md-10 mt-5">
+<div class="col-sm-9 col-md-10 mt-2">
 	<h1>Sell book list </h1>
 	<table class="table">
 		<tr>
-			<td>Product name</td>
-			<td>brand</td>
-			<td>cat</td>
-			<td>price</td>
-			<td>Cname</td>
-			<td>adress</td>
-			<td>city</td>
-			<td>state</td>
-			<td>Pincode</td>
+			<th>Product name</th>
+			<th>Brand</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>Customer name</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Pincode</th>
 		</tr>
 
 <?php
-	$q="select *from sell";
+	$q="select * from sell";
 	$run=mysqli_query($conn,$q);
 
 	while($row = mysqli_fetch_assoc($run)) {
@@ -44,7 +44,7 @@ if(isset($_SESSION['is_adminlogin'])){
 		$add=$row['address'];
 		$city=$row['city'];
 		$state=$row['state'];
-		//$mno=$row['mobileno'];
+		// $mno=$row['mobileno'];
 		$pin=$row['pincode'];
 ?>
 
@@ -61,7 +61,7 @@ if(isset($_SESSION['is_adminlogin'])){
 	</tr>
 
 <?php
-}
+	}
 ?>
 	</table>
 </div>

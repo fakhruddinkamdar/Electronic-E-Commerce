@@ -14,7 +14,7 @@ if(isset($_SESSION['is_adminlogin'])){
 }
 ?>
 
-<div class="col-sm-9 col-md-10 mt-5 text-center">
+<div class="col-sm-9 col-md-10 mt-2 text-center">
   <!--Table-->
   <p class=" bg-dark text-white p-2">Product/Parts Details</p>
 
@@ -31,8 +31,8 @@ if(isset($_SESSION['is_adminlogin'])){
               <th scope="col">DOP</th>
               <th scope="col">Available</th>
               <th scope="col">Total</th>
-              <th scope="col">Original Cost Each</th>
-              <th scope="col">Selling Price Each</th>
+              <th scope="col">Original Price</th>
+              <th scope="col">Selling Price</th>
               <th scope="col">Action</th>
             </tr>
           </thead>

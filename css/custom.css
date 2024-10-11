@@ -12,6 +12,7 @@
 
 .navbar #myMenu .custom-nav .nav-item a:hover {
   color: #F0AAB1;
+  font-weight: bolder;
 }
 
 /* Make Header Image Responsive */
@@ -36,8 +37,7 @@ a {
 .active {
   color: white;
   background-color: #DC3545;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 
 a:hover {
@@ -119,5 +119,10 @@ fi-color:hover {
 }
 
 .sidebar {
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.form-group label {
+  font-weight: 500;
 }

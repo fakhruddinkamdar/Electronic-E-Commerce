@@ -10,7 +10,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])) {
 	$aEmail = $_SESSION['aEmail'];
 } else {
-	echo "<script> location.href='login.php'; </script>";
+	echo "<script> location.href='index.php'; </script>";
 }
 ?>
 
@@ -23,7 +23,7 @@ if(isset($_REQUEST['submit1'])) {
 		($_REQUEST['pcategory'] == "") ||
 		($_REQUEST['pb'] == "")) {
 		//echo "error";
-		$msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> PLZ...Fill All Fields </div>';
+		$msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory </div>';
 		// msg displayed if required field missing
 		//$msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
 	} else {
@@ -61,10 +61,10 @@ if(isset($_REQUEST['submit1'])) {
 ?>
 
 <!-- form !-->
-<div class="col-sm-9 col-md-10 mt-5">
+<div class="col-sm-9 col-md-10 mt-2">
 	<!--<div class="block">
 		<div class="box round first"> !-->
-			<h2> add product </h2>
+			<h2> Add new product </h2>
 			<form class="mx-5" name="form1" action="" method="post" enctype="multipart/form-data">
 
 				<div class="form-group">

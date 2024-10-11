@@ -26,10 +26,10 @@
    </nav>
 
    <!-- Side Bar -->
-   <div class="container-md" style="margin-top:20px;">
-      <div class="row mr-1">
+   <div class="container-md" style="margin-top:60px;">
+      <div class="row mr-1 ml-1">
 
-         <nav class="col-sm-2 bg-light sidebar py-5 d-print-none">
+         <nav class="col-sm-2 sidebar d-print-none" style="background-color:#a2b887">
             <div class="sidebar-sticky">
 
                <ul class="nav flex-column">
@@ -45,7 +45,7 @@
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link <?php if(PAGE == 'Sell') { echo 'active'; } ?> " href="sell.php">
+                     <a class="nav-link <?php if(PAGE == 'sell') { echo 'active'; } ?> " href="sell.php">
                         <i class="fas fa-shopping-cart"></i> Sell</a>
                   </li>
 
@@ -90,7 +90,7 @@
                   </li>
 
                   <li class="nav-item">
-                  <a class="nav-link" href="../logout.php">
+                  <a class="nav-link" href="../Admin/index.php">
                   <i class="fas fa-sign-out-alt"></i> Logout</a>
                   </li>
 

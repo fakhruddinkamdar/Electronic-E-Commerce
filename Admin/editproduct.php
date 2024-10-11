@@ -9,7 +9,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 // update
@@ -47,7 +47,7 @@ if(isset($_REQUEST['pupdate'])) {
 }
 ?>
 
-<div class="col-sm-6 mt-5  mx-3 jumbotron">
+<div class="col-sm-6 mt-2 mx-3 jumbotron">
   <h3 class="text-center">Update Product Details</h3>
   <?php
   if(isset($_REQUEST['view'])) {

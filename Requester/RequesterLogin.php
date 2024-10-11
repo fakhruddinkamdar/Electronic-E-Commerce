@@ -21,12 +21,13 @@
         exit;
 
       } else {
-        $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+        $msg = '<div class="alert alert-warning mt-2" role="alert"> Invalid Credentials </div>';
       }
 
     }
   } else {
     echo "<script>location.href='RequesterProfile.php';</script>";
+    session_destroy();
   }
 ?>
 

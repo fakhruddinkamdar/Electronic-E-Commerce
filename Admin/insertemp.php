@@ -10,7 +10,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 if(isset($_REQUEST['empsubmit'])) {
@@ -39,7 +39,7 @@ if(isset($_REQUEST['empsubmit'])) {
 }
 ?>
 
-<div class="col-sm-6 mt-5  mx-3 jumbotron">
+<div class="col-sm-6 mt-2 mx-3 jumbotron">
   <h3 class="text-center">Add New Technician</h3>
 
   <form action="" method="POST">

@@ -10,7 +10,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 $aEmail = $_SESSION['aEmail'];
 
@@ -42,7 +42,7 @@ if(isset($_REQUEST['passupdate'])) {
 <div class="col-sm-9 col-md-10">
   <div class="row">
     <div class="col-sm-6">
-      <form class="mt-5 mx-5">
+      <form class="mt-2 mx-5">
 
         <div class="form-group">
           <label for="inputEmail">Email</label>

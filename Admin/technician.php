@@ -10,11 +10,11 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 ?>
 
-<div class="col-sm-9 col-md-10 mt-5 text-center">
+<div class="col-sm-9 col-md-10 mt-2 text-center">
   <!--Table-->
   <p class=" bg-dark text-white p-2">List of Technicians</p>
   <?php

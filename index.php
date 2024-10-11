@@ -26,10 +26,11 @@
   <!-- Start Navigation -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-secondary pl-5 fixed-top">
     <a href="index.php" class="navbar-brand">Online Electronic Centre</a>
-    <!--<span class="navbar-text">Customer's Happiness is our Aim</span> -->
+
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="myMenu">
       <ul class="navbar-nav pl-5 custom-nav">
         <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
@@ -39,7 +40,9 @@
         <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
-  </nav> <!-- End Navigation -->
+
+  </nav>
+  <!-- End Navigation -->
 
 
   <div id="demo" class="carousel slide " data-ride="carousel">
@@ -110,15 +113,15 @@
   <!-- End Registration  -->
 
   <!-- Start Happy Customer  -->
-  <div class="jumbotron bg-secondary" id="Customer">
+  <div class="p-3 bg-secondary" id="Customer" style="margin: 80px 0px;">
 
   <!-- Start Happy Customer Jumbotron -->
     <div class="container">
 
     <!-- Start Customer Container -->
-      <h2 class="text-center text-white">Happy Customers</h2>
+      <h2 class="text-center text-white mb-4">Happy Customers</h2>
 
-      <div class="row mt-5">
+      <div class="row mt-3">
         <div class="col-lg-3 col-sm-6">
 
           <!-- Start Customer 1st Column-->
@@ -174,7 +177,7 @@
    <h3 id="Contact"></h3>
 
    <!--Start Contact Us Container-->
-    <h2 class="text-center mb-4" style="margin-top: 120px;">Contact Us</h2> <!-- Contact Us Heading -->
+    <h2 class="text-center mt-4 mb-4">Contact Us</h2> <!-- Contact Us Heading -->
     <div class="container mr-2 text-center">
 
     <!--Start Contact Us Row-->
@@ -202,14 +205,14 @@
           <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-instagram"></i></a>
           <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-youtube"></i></a>
           <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" target="_blank" class="pr-2 fi-color"><i class="fas fa-rss"></i></a>
+          <!-- <a href="#" target="_blank" class="pr-2 fi-color"><i class="fas fa-rss"></i></a> -->
         </div> <!-- End Footer 1st Column -->
 
         <div class="col-md-6 text-right">
           <!-- Start Footer 2nd Column -->
           <small> Designed by Fakhruddin Kamdar & Mustafa Rangwala &copy; 2023.
           </small>
-          <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
+          <small class="ml-2"><a href="Admin/index.php">Admin Login</a></small>
         </div> <!-- End Footer 2nd Column -->
 
       </div> <!-- End Footer Row -->

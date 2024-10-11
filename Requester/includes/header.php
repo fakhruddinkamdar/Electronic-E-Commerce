@@ -26,8 +26,8 @@
 
   <!-- Side Bar -->
   <div class="container-md">
-    <div class="row mr-1" style="margin-top:60px;">
-      <nav class="col-sm-2 bg-light sidebar d-print-none">
+    <div class="row mr-1 ml-1" style="margin-top:60px;">
+      <nav class="col-sm-2 sidebar d-print-none" style="background-color:#a2b887">
         <div class="sidebar-sticky">
 
           <ul class="nav flex-column">

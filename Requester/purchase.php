@@ -22,7 +22,7 @@ if($_SESSION['is_login']) {
 	if($result->num_rows > 0) {
 ?>
 
-	<div class="product-list">
+	<div class="product-list" style="margin-left:20px;">
 
 			<?php
 		while($row = mysqli_fetch_assoc($result)) {
