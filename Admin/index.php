@@ -60,7 +60,7 @@ if(!isset($_SESSION['is_adminlogin'])) {
     <span>Admin Area(Demo)</span>
   </p>
 
-  <div class="container-fluid mb-5">
+  <div class="container-fluid">
     <div class="row justify-content-center custom-margin">
       <div class="col-sm-6 col-md-4">
 

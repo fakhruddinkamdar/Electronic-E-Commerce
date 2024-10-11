@@ -21,12 +21,12 @@
 <body>
  <!-- Top Navbar -->
  <nav class="navbar navbar-dark fixed-top bg-secondary flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="RequesterProfile.php">Online Electronic Centre</a>
+  <a class="navbar-brand col-sm-3 mr-0" href="RequesterProfile.php">Online Electronic Centre</a>
  </nav>
 
  <!-- Side Bar -->
- <div class="container-md mb-5 " style="margin-top:40px;">
-  <div class="row">
+ <div class="container-md" style="margin-top:40px;">
+  <div class="row mr-1">
    <nav class="col-sm-2 bg-light sidebar py-5 d-print-none">
     <div class="sidebar-sticky">
 

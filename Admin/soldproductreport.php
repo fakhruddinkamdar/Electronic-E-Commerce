@@ -10,23 +10,25 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 ?>
 
-<div class="col-sm-9 col-md-10 mt-5 text-center">
+<div class="col-md-10 mt-5">
   <form action="" method="POST" class="d-print-none">
 
-    <div class="form-row">
-      <div class="form-group col-md-2">
+    <div class="form-row" style="justify-content: safe">
+      <div class="form-group col-md-2 mt-2 ml-2">
         <input type="date" class="form-control" id="startdate" name="startdate">
-      </div> <span> to </span>
+      </div>
 
-      <div class="form-group col-md-2">
+      <div class="ml-2" style="align-self:center">  To  </div>
+
+      <div class="form-group col-md-2 mt-2 ml-2">
         <input type="date" class="form-control" id="enddate" name="enddate">
       </div>
 
-      <div class="form-group">
+      <div class="form-group mt-2 ml-2">
         <input type="submit" class="btn btn-secondary" name="searchsubmit" value="Search">
       </div>
     </div>
@@ -39,7 +41,8 @@ if(isset($_SESSION['is_adminlogin'])){
         // $sql = "SELECT * FROM customer_tb WHERE cpdate BETWEEN '2018-10-11' AND '2018-10-13'";
         $sql = "SELECT * FROM customer_tb WHERE cpdate BETWEEN '$startdate' AND '$enddate'";
         $result = $conn->query($sql);
-        if($result->num_rows > 0){
+
+        if($result->num_rows > 0) {
         echo '
           <p class=" bg-dark text-white p-2 mt-4">Details</p>
           <table class="table">
@@ -83,7 +86,7 @@ if(isset($_SESSION['is_adminlogin'])){
       }
     }
   ?>
-</div>
+  </div>
 </div>
 </div>
 

@@ -14,7 +14,7 @@ if(isset($_SESSION['is_adminlogin'])){
 }
 ?>
 
-<div class="col-sm-4 mb-5">
+<div class="col-sm-4">
   <!-- Main Content area start Middle -->
   <?php
   $sql = "SELECT request_id, request_info, request_desc, request_date FROM submitrequest_tb";
