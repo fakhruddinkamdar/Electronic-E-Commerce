@@ -23,9 +23,9 @@ if(isset($_REQUEST['submit1'])) {
 		($_REQUEST['pcategory'] == "") ||
 		($_REQUEST['pb'] == "")) {
 		//echo "error";
-		$msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory </div>';
+		$msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
 		// msg displayed if required field missing
-		//$msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+		//$msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
 	} else {
 		// Assigning User Values to Variable
 		$prname = $_REQUEST['pname'];

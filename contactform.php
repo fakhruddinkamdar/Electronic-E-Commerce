@@ -6,7 +6,7 @@ if(isset($_REQUEST['submit'])) {
    // Checking for Empty Fields
    if(($_REQUEST['name'] == "") || ($_REQUEST['subject'] == "") || ($_REQUEST['email'] == "") || ($_REQUEST['message'] == "")) {
       // msg displayed if required field missing
-      $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+      $msg = '<div class="alert alert-warning mt-2" role="alert">All fields are mandatory...</div>';
    } else {
       $name = $_REQUEST['name'];
       $subject = $_REQUEST['subject'];
@@ -19,24 +19,29 @@ if(isset($_REQUEST['submit'])) {
 
       mail($mailTo, $subject, $txt, $headers);
 
-      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Sent Successfully </div>';
+      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Sent Successfully... </div>';
 
    }
 }
 ?>
 
 <!--Start Contact Us Row-->
-<div class="col-md-10">
+<!-- <div class="col-md-10"> -->
 
 <!--Start Contact Us 1st Column-->
-   <form action="" method="post">
+   <form class="mr-5 ml-5" action="" method="post">
       <input type="text" class="form-control" name="name" placeholder="Name"><br>
       <input type="text" class="form-control" name="subject" placeholder="Subject"><br>
       <input type="email" class="form-control" name="email" placeholder="E-mail"><br>
       <textarea class="form-control" name="message" placeholder="How can we help you?" style="height:150px;"></textarea><br>
 
-      <input class="btn btn-primary" style="align:end" type="submit" value="Send" name="submit"><br><br>
+      <button class="btn btn-primary" type="submit" value="Send" name="submit">
+         Send!
+         <i class="fas fa-arrow-right"></i>
+      </button>
+      <br><br>
+
       <?php if(isset($msg)) { echo $msg; } ?>
    </form>
 
-</div> <!-- End Contact Us 1st Column-->
+<!-- </div> End Contact Us 1st Column -->

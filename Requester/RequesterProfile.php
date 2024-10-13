@@ -24,7 +24,7 @@ if($result->num_rows == 1) {
 if(isset($_REQUEST['nameupdate'])) {
   if($_REQUEST['rName'] == " " || empty($_REQUEST['rName'])) {
     // msg displayed if required field missing
-    $passmsg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $passmsg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
   } else {
     $rName = $_REQUEST["rName"];
     if($rName == "" || empty($rName)) {
@@ -36,10 +36,10 @@ if(isset($_REQUEST['nameupdate'])) {
 
     if($conn->query($sql) == TRUE) {
       // below msg display on form submit success
-      $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
+      $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully... </div>';
     } else {
       // below msg display on form submit failed
-      $passmsg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update </div>';
+      $passmsg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update! </div>';
     }
   }
 }

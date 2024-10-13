@@ -17,7 +17,7 @@ if(isset($_REQUEST['reqsubmit'])) {
   // Checking for Empty Fields
   if(($_REQUEST['r_name'] == "") || ($_REQUEST['r_email'] == "") || ($_REQUEST['r_password'] == "")){
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory...</div>';
   } else {
     // Assigning User Values to Variable
     $rname = $_REQUEST['r_name'];
@@ -27,10 +27,10 @@ if(isset($_REQUEST['reqsubmit'])) {
     $sql = "INSERT INTO requesterlogin_tb (r_name, r_email, r_password) VALUES ('$rname', '$rEmail', '$rPassword')";
     if($conn->query($sql) == TRUE) {
       // below msg display on form submit success
-      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Added Successfully </div>';
+      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Added Successfully... </div>';
     } else {
       // below msg display on form submit failed
-      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Add </div>';
+      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Add! </div>';
     }
   }
 }

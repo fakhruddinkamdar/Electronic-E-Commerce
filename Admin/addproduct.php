@@ -2,6 +2,7 @@
 define('TITLE', 'Add New Product');
 define('PAGE', 'assets');
 
+require '../const.php';
 include('includes/header.php');
 include('../dbConnection.php');
 
@@ -23,7 +24,7 @@ if(isset($_REQUEST['psubmit'])) {
       ($_REQUEST['poriginalcost'] == "") ||
       ($_REQUEST['psellingcost'] == "")) {
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> <?php echo $MANDATORY_FIELDS; ?> </div>';
   } else {
     // Assigning User Values to Variable
     $pname = $_REQUEST['pname'];

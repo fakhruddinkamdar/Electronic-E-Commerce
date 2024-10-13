@@ -23,7 +23,7 @@ if(isset($_REQUEST['pupdate'])) {
      ($_REQUEST['poriginalcost'] == "") ||
      ($_REQUEST['psellingcost'] == "")){
    // msg displayed if required field missing
-   $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+   $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory...</div>';
   } else {
     // Assigning User Values to Variable
     $pid = $_REQUEST['pid'];
@@ -38,10 +38,10 @@ if(isset($_REQUEST['pupdate'])) {
 
     if($conn->query($sql) == TRUE) {
       // below msg display on form submit success
-      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
+      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully... </div>';
     } else {
       // below msg display on form submit failed
-      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update </div>';
+      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update! </div>';
     }
   }
 }

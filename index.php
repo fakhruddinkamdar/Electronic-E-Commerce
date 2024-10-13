@@ -178,11 +178,11 @@
 
    <!--Start Contact Us Container-->
     <h2 class="text-center mt-4 mb-4">Contact Us</h2> <!-- Contact Us Heading -->
-    <div class="container mr-2 text-center">
+    <div class="container text-right">
 
     <!--Start Contact Us Row-->
       <?php include('contactform.php'); ?>
-      <!-- End Contact Us 1st Column -->
+    <!-- End Contact Us 1st Column -->
 
     </div>
 

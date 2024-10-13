@@ -24,7 +24,7 @@ if(isset($_REQUEST['psubmit'])) {
      ($_REQUEST['totalcost'] == "") ||
      ($_REQUEST['selldate'] == "")) {
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
   } else {
     // Assigning User Values to Variable for update
     $pid = $_REQUEST['pid'];
