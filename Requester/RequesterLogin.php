@@ -21,12 +21,13 @@
         exit;
 
       } else {
-        $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+        $msg = '<div class="alert alert-warning mt-2" role="alert"> Invalid Credentials </div>';
       }
 
     }
   } else {
     echo "<script>location.href='RequesterProfile.php';</script>";
+    session_destroy();
   }
 ?>
 
@@ -62,7 +63,7 @@
   <p class="text-center" style="font-size: 20px;"><i class="fas fa-user-secret text-danger"></i> <span>Requester Area</span>
   </p>
 
-  <div class="container-fluid mb-5">
+  <div class="container-fluid">
 
   <div class="row justify-content-center custom-margin">
       <div class="col-sm-6 col-md-4">

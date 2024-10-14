@@ -4,7 +4,7 @@ if(session_id() == '') session_start();
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 if(isset($_REQUEST['view'])) {
@@ -31,7 +31,7 @@ if(isset($_REQUEST['assign'])) {
     ($_REQUEST['inputdate'] == "")) {
 
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory. </div>';
 
   } else {
     // Assigning User Values to Variable
@@ -63,7 +63,7 @@ if(isset($_REQUEST['assign'])) {
 // Assign work Order Request Data going to submit and save on db assignwork_tb table [END]
 ?>
 
-<div class="col-sm-5 mt-5 jumbotron">
+<div class="col-sm-5 mt-2 jumbotron">
   <!-- Main Content area Start Last -->
   <form action="" method="POST">
 

@@ -2,6 +2,7 @@
 define('TITLE', 'Add New Product');
 define('PAGE', 'assets');
 
+require '../const.php';
 include('includes/header.php');
 include('../dbConnection.php');
 
@@ -10,7 +11,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 if(isset($_REQUEST['psubmit'])) {
@@ -23,7 +24,7 @@ if(isset($_REQUEST['psubmit'])) {
       ($_REQUEST['poriginalcost'] == "") ||
       ($_REQUEST['psellingcost'] == "")) {
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> <?php echo $MANDATORY_FIELDS; ?> </div>';
   } else {
     // Assigning User Values to Variable
     $pname = $_REQUEST['pname'];
@@ -46,7 +47,7 @@ if(isset($_REQUEST['psubmit'])) {
 }
 ?>
 
-<div class="col-sm-6 mt-5  mx-3 jumbotron">
+<div class="col-sm-6 mt-2 mx-3 jumbotron">
   <h3 class="text-center">Add New Product</h3>
 
     <form action="" method="POST">

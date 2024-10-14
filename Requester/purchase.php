@@ -13,42 +13,43 @@ if($_SESSION['is_login']) {
 	echo "<script> location.href='RequesterLogin.php'; </script>";
 }
 
-
 ?>
-<!--<div class="col-sm-4"><br>!-->
+
 <?php
 	$sql="select * from uploadproduct";
 	$result=mysqli_query($conn,$sql);
 
-	if($result->num_rows > 0)
-	{
-		while($row=mysqli_fetch_assoc($result))
-		{
+	if($result->num_rows > 0) {
+?>
+
+	<div class="product-list" style="margin-left:20px;">
+
+			<?php
+		while($row = mysqli_fetch_assoc($result)) {
 			$id=$row['id'];
 			$img=$row['product_image'];
 			$price=$row['product_price'];
 			$brand=$row['Brand'];
-?>
+			?>
 
-		<!--<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:50px; padding:16px;margin-bottom:10px;width:500px !important;float:left;margin-right:2px;" align="center">!-->
+			<!-- <ul> -->
+				<div class="product fa-ul">
+					<img src='../Admin/<?php echo $img; ?>' height='150px' width='150px' class="shadow">
+					<h3 align="center"><?php echo $brand; ?></h3>
+					<h5 align="center"><?php echo $price; ?></h5>
+					<center><a href="b.php?id=<?php echo $id;?>" class="btn btn-success btn-sm">Buy now
+						<i class="fa fa-greater-than"></i>
+					</a></center>
+				</div>
+			<!-- </ul> -->
 
-		<table width="300" border="0" cellpadding="20" style="margin-top: 30px;" class="product-table">
-		<tr>
-		<td align="center" valign="center">
+		<?php
+		}
+		?>
 
-		<?php echo "<img src='../Admin/$img' height='150px' width='150px' class='product-img'>";?></center>
-		<br/>
-		<h3 align="center"><?php echo $price; ?></h3>
-
-		<h3 align="center"><?php echo $brand; ?></h3>
-
-		<center><a href="b.php?id=<?php echo $id;?>" class="btn btn-success">Buy now</a></center>
-		</td>
-		</tr>
-		</table>
+	</div>
 
 <?php
-		}
 	}
 ?>
 
@@ -60,6 +61,4 @@ if($_SESSION['is_login']) {
 		<a href="redmi.php">Redmi</a>
 	</div>
 
-<?php
-	include('includes/footer.php');
-?>
+<?php include('includes/footer.php'); ?>

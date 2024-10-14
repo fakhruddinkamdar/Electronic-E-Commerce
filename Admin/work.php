@@ -10,11 +10,11 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 ?>
 
-<div class="col-sm-9 col-md-10 mt-5">
+<div class="col-sm-9 col-md-10 mt-2">
 <?php
   $sql = "SELECT * FROM assignwork_tb";
   $result = $conn->query($sql);

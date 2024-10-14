@@ -8,14 +8,14 @@ include('../dbConnection.php');
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 $sql = "SELECT * FROM customer_tb WHERE custid = {$_SESSION['myid']}";
 $result = $conn->query($sql);
 if($result->num_rows == 1) {
   $row = $result->fetch_assoc();
-  echo "<div class='ml-5 mt-5'>
+  echo "<div class='ml-5 mt-2'>
     <h3 class='text-center'>Customer Bill</h3>
     <table class='table'>
       <tbody>

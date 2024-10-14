@@ -10,7 +10,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 $sql = "SELECT max(request_id) FROM submitrequest_tb";
@@ -32,21 +32,23 @@ $totaltech = $result->num_rows;
 <div class="col-sm-9 col-md-10">
   <div class="row mx-5 text-center">
 
-    <div class="col-sm-4 mt-5">
+    <div class="col-sm-4 mt-3">
       <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
         <div class="card-header">Requests Received</div>
         <div class="card-body">
-          <h4 class="card-title"><?php echo $submitrequest; ?></h4>
+          <h4 class="card-title" style="font-size: xx-large;">
+            <?php echo $submitrequest; ?>
+          </h4>
           <a class="btn text-white" href="request.php">View</a>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-4 mt-5">
+    <div class="col-sm-4 mt-3">
       <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
         <div class="card-header">Assigned Work</div>
         <div class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title" style="font-size: xx-large;">
             <?php echo $assignwork; ?>
           </h4>
           <a class="btn text-white" href="work.php">View</a>
@@ -54,11 +56,11 @@ $totaltech = $result->num_rows;
       </div>
     </div>
 
-    <div class="col-sm-4 mt-5">
+    <div class="col-sm-4 mt-3">
       <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
         <div class="card-header">No. of Technician</div>
         <div class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title" style="font-size: xx-large;">
             <?php echo $totaltech; ?>
           </h4>
           <a class="btn text-white" href="technician.php">View</a>
@@ -68,7 +70,7 @@ $totaltech = $result->num_rows;
 
   </div>
 
-  <div class="mx-5 mt-5 text-center">
+  <div class="mx-5 mt-3 text-center">
     <!--Table-->
     <p class=" bg-dark text-white p-2">List of Requesters</p>
     <?php

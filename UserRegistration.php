@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group">
-          <i class="fas fa-user"></i><label for="email" class="pl-2 font-weight-bold">Email</label>
+          <i class="fas fa-mail-bulk"></i><label for="email" class="pl-2 font-weight-bold">Email</label>
           <input type="email" class="form-control" placeholder="Email" name="rEmail">
           <!--Add text-white below if want text color white-->
           <small class="form-text">We'll never share your email with anyone else.</small>
@@ -55,7 +55,10 @@
           <input type="password" class="form-control" placeholder="Password" name="rPassword">
         </div>
 
-        <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
+        <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">
+          Sign Up
+          <i class="fas fa-arrow-right"></i>
+        </button>
         <em style="font-size:10px; font-weight: bold;">Note - By clicking Sign Up, you agree to our Terms, Data
           Policy and Cookie Policy.</em>
 

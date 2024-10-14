@@ -9,7 +9,7 @@ session_start();
 if(isset($_SESSION['is_adminlogin'])) {
   $aEmail = $_SESSION['aEmail'];
 } else {
-  echo "<script> location.href='login.php'; </script>";
+  echo "<script> location.href='index.php'; </script>";
 }
 
 // update
@@ -18,7 +18,7 @@ if(isset($_REQUEST['requpdate'])) {
   // Checking for Empty Fields
   if(($_REQUEST['r_login_id'] == "") || ($_REQUEST['r_name'] == "") || ($_REQUEST['r_email'] == "")) {
     // msg displayed if required field missing
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory...</div>';
   } else {
     // Assigning User Values to Variable
     $rid = $_REQUEST['r_login_id'];
@@ -29,16 +29,16 @@ if(isset($_REQUEST['requpdate'])) {
 
     if($conn->query($sql) == TRUE) {
       // below msg display on form submit success
-      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
+      $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully... </div>';
     } else {
       // below msg display on form submit failed
-      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update </div>';
+      $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update! </div>';
     }
   }
 }
 ?>
 
-<div class="col-sm-6 mt-5  mx-3 jumbotron">
+<div class="col-sm-6 mt-2 mx-3 jumbotron">
   <h3 class="text-center">Update Requester Details</h3>
   <?php
   if(isset($_REQUEST['view'])){

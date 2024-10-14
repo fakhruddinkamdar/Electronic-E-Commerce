@@ -28,7 +28,7 @@ if(isset($_REQUEST['submitrequest'])) {
     ($_REQUEST['requestermobile'] == "") ||
     ($_REQUEST['requestdate'] == "")) {
 
-    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+    $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
 
   } else {
 
@@ -70,7 +70,7 @@ if(isset($_REQUEST['submitrequest'])) {
 }
 
 ?>
-<div class="col-sm-9 col-md-10 mt-5">
+<div class="col-sm-9 col-md-10 mt-2">
 
   <form class="mx-5" action="" method="POST">
 
@@ -139,8 +139,13 @@ if(isset($_REQUEST['submitrequest'])) {
 
     </div>
 
-    <button type="submit" class="btn btn-danger" name="submitrequest">Submit</button>
-    <button type="reset" class="btn btn-secondary">Reset</button>
+    <button type="submit" class="btn btn-danger" name="submitrequest">Submit
+      <i class="fa fa-user"></i>
+      </button>
+
+      <button type="reset" class="btn btn-secondary">Reset
+      <i class="fa fa-backward"></i>
+    </button>
   </form>
   <!-- below msg display if required fill missing or form submitted success or failed -->
   <?php if(isset($msg)) {echo $msg; } ?>
