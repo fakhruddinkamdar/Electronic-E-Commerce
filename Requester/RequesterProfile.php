@@ -58,7 +58,9 @@ if(isset($_REQUEST['nameupdate'])) {
       <input required="true" type="text" class="form-control" id="inputName" name="rName" value="<?php echo $rName ?>" >
     </div>
 
-    <button type="submit" class="btn btn-danger"  name="nameupdate" onClick="return blank();">Update</button>
+    <button type="submit" class="btn btn-danger"  name="nameupdate" onClick="return blank();">Update
+      <i class="fa fa-user"></i>
+    </button>
     <?php if(isset($passmsg)) {echo $passmsg; } ?>
 
   </form>

@@ -37,7 +37,9 @@ if($_SESSION['is_login']) {
 					<img src='../Admin/<?php echo $img; ?>' height='150px' width='150px' class="shadow">
 					<h3 align="center"><?php echo $brand; ?></h3>
 					<h5 align="center"><?php echo $price; ?></h5>
-					<center><a href="b.php?id=<?php echo $id;?>" class="btn btn-success">Buy now</a></center>
+					<center><a href="b.php?id=<?php echo $id;?>" class="btn btn-success btn-sm">Buy now
+						<i class="fa fa-greater-than"></i>
+					</a></center>
 				</div>
 			<!-- </ul> -->
 

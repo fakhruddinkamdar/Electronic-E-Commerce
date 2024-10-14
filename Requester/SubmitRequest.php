@@ -139,8 +139,13 @@ if(isset($_REQUEST['submitrequest'])) {
 
     </div>
 
-    <button type="submit" class="btn btn-danger" name="submitrequest">Submit</button>
-    <button type="reset" class="btn btn-secondary">Reset</button>
+    <button type="submit" class="btn btn-danger" name="submitrequest">Submit
+      <i class="fa fa-user"></i>
+      </button>
+
+      <button type="reset" class="btn btn-secondary">Reset
+      <i class="fa fa-backward"></i>
+    </button>
   </form>
   <!-- below msg display if required fill missing or form submitted success or failed -->
   <?php if(isset($msg)) {echo $msg; } ?>

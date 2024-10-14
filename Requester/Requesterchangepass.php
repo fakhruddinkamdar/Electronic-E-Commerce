@@ -54,7 +54,9 @@ if(isset($_REQUEST['passupdate'])) {
           <input type="password" class="form-control" id="inputnewpassword" placeholder="New Password" name="rPassword">
         </div>
 
-        <button type="submit" class="btn btn-danger mr-4 mt-4" name="passupdate">Update</button>
+        <button type="submit" class="btn btn-danger mr-4 mt-4" name="passupdate">Update
+          <i class="fas fa-key"></i>
+        </button>
         <button type="reset" class="btn btn-secondary mt-4">Reset</button>
         <?php if(isset($passmsg)) {echo $passmsg; } ?>
 

@@ -41,7 +41,7 @@
 
             <li class="nav-item">
               <a class="nav-link <?php if(PAGE == 'SubmitRequest') { echo 'active'; } ?>" href="SubmitRequest.php">
-              <i class="fab fa-accessible-icon"></i> Submit Request
+              <i class="fas fa-arrow-right"></i> Submit Request
               </a>
             </li>
 

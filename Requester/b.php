@@ -34,12 +34,12 @@ if($_SESSION['is_login']){
 
 
 
-	<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:50px; padding:16px;margin-bottom:10px;" align="center">
+	<div class="item-purchase shadow" align="center">
 
-		<?php echo "<img src='../Admin/$img' width='150px' height='150px' >";?>
-		<h4 align="center"> Name:<?php echo $name; ?></h4>
-		<h4 align="center"> Price:<?php echo $price; ?></h4>
-		<h4 align="center"> Brand:<?php echo $brand; ?></h4>
+		<?php echo "<img src='../Admin/$img' class='shadow' width='150px' height='150px' style='border-radius: 12px; margin-bottom: 20px;' >";?></br>
+		<h4 align="center"> Name: <?php echo $name; ?></h4>
+		<h4 align="center"> Brand: <?php echo $brand; ?></h4>
+		<h4 align="center"> Price: <?php echo $price; ?></h4>
 
 	</div>
 
@@ -95,11 +95,9 @@ if($_SESSION['is_login']){
 		$sql="insert into sell(Pname,brand,cat,price,Cname,address,city,state,mobileno,pincode)"
 			." values('$name','$brand','$cat','$price','$n1','$add','$city','$state','$mno','$pin')";
 
-		if($conn->query($sql) == TRUE) {
-			echo "<script>alert('Your Product will be delivered Soon')</script>";
-		} else {
-			echo "<script>alert('Something is Wrong PLZ....Try Again')</script>";
-		}
+		if($conn->query($sql) == TRUE) echo "<script>alert('Your Product will be delivered soon...')</script>";
+		else echo "<script>alert('Something is Wrong. Please Try Again')</script>";
+
 	}
 	?>
 

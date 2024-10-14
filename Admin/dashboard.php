@@ -36,7 +36,9 @@ $totaltech = $result->num_rows;
       <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
         <div class="card-header">Requests Received</div>
         <div class="card-body">
-          <h4 class="card-title"><?php echo $submitrequest; ?></h4>
+          <h4 class="card-title" style="font-size: xx-large;">
+            <?php echo $submitrequest; ?>
+          </h4>
           <a class="btn text-white" href="request.php">View</a>
         </div>
       </div>
@@ -46,7 +48,7 @@ $totaltech = $result->num_rows;
       <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
         <div class="card-header">Assigned Work</div>
         <div class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title" style="font-size: xx-large;">
             <?php echo $assignwork; ?>
           </h4>
           <a class="btn text-white" href="work.php">View</a>
@@ -58,7 +60,7 @@ $totaltech = $result->num_rows;
       <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
         <div class="card-header">No. of Technician</div>
         <div class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title" style="font-size: xx-large;">
             <?php echo $totaltech; ?>
           </h4>
           <a class="btn text-white" href="technician.php">View</a>

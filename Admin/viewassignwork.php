@@ -14,7 +14,7 @@ if(isset($_SESSION['is_adminlogin'])){
 }
 ?>
 
-<div class="col-sm-6 mt-2 mx-3">
+<div class="col-sm-6 mt-2 mx-3 mb-3">
 <h3 class="text-center">Assigned Work Details</h3>
 
 <?php
