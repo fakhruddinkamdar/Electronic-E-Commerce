@@ -29,6 +29,8 @@ if(isset($_REQUEST['passupdate'])) {
       if($conn->query($sql) == TRUE){
         // below msg display on form submit success
         $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully... </div>';
+        header("Refresh: 0; url=/OSMS/logout.php");
+        session_destroy();
       } else {
         // below msg display on form submit failed
         $passmsg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update! </div>';

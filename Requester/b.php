@@ -103,13 +103,13 @@ if($_SESSION['is_login']){
 
 </div>
 
-<div class="container">
+<!-- <div class="container">
 	<h1 align="center">Brands</h1>
 	<a href="whirpool.php">whirpool</a>
 	<a href="#">LG</a>
 	<a href="#">videcon</a>
 	<a href="#">redmi</a>
-</div>
+</div> -->
 
 
 <?php include('includes/footer.php'); ?>

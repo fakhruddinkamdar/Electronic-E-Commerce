@@ -210,7 +210,7 @@
 
         <div class="col-md-6 text-right">
           <!-- Start Footer 2nd Column -->
-          <small> Designed by Fakhruddin Kamdar & Mustafa Rangwala &copy; 2023.
+          <small>Designed by Fakhruddin, Harsh, Dishang &copy; December 2024.
           </small>
           <small class="ml-2"><a href="Admin/index.php">Admin Login</a></small>
         </div> <!-- End Footer 2nd Column -->

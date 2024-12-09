@@ -47,13 +47,13 @@ if($_SESSION['is_login']) {
 	}
 ?>
 
-	<div class="container">
+	<!-- <div class="container">
 		<h1 align="center">Brands</h1>
 		<a href="whirpool.php">whirpool</a>
 		<a href="lg.php">LG</a>
 		<a href="videocon.php">videcon</a>
 		<a href="redmi.php">videcon</a>
-	</div>
+	</div> -->
 
 <?php
 include('includes/footer.php');

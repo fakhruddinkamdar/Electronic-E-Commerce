@@ -53,13 +53,13 @@ if(isset($_REQUEST['submitrequest'])) {
     if($conn->query($sql) == TRUE){
     // below msg display on form submit success
     $genid = mysqli_insert_id($conn);
-    $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Request Submitted Successfully Your'. $genid .' </div>';
+    $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Request Submitted Successfully Your id is: '. $genid .' </div>';
 
-    session_start();
+    // session_start();
 
     $_SESSION['myid'] = $genid;
 
-    echo "<script> location.href='submitrequestsuccess.php'; </script>";
+    // echo "<script> location.href='submitrequestsuccess.php'; </script>";
     // include('submitrequestsuccess.php');
 
     } else {
