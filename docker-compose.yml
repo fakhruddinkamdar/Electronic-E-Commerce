@@ -1,0 +1,39 @@
+services:
+  web:
+    build: .
+    container_name: php-apache
+    ports:
+      - "8081:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: ecommerceuser
+      MYSQL_PASSWORD: ecommercepass
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./osms_db.sql:/docker-entrypoint-initdb.d/osms_db.sql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: ecommerceuser
+      PMA_PASSWORD: ecommercepass
+    ports:
+      - "8082:80"
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
