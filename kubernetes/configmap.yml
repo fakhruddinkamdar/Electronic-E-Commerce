@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecommerce-config
+  labels:
+    app: electronic-e-commerce
+data:
+  # application-level configuration (non-sensitive)
+  APP_NAME: "Electronic E-Commerce"
+  LOG_LEVEL: "info"
+  # default port the container listens on
+  PORT: "3000"
