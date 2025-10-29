@@ -8,9 +8,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build and push the image
         run : |
-          docker login --username HarshPanchal18 --password ${{ secrets.GH_PAT }} ghcr.io
-          docker build . --tag ghcr.io/HarshPanchal18/ecommerce-osms:latest
-          docker push ghcr.io/HarshPanchal18/ecommerce-osms:latest
+          docker login --username harshpanchal18 --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build . --tag ghcr.io/harshpanchal18/ecommerce-osms:latest
+          docker push ghcr.io/harshpanchal18/ecommerce-osms:latest
   # build-and-deploy:
   #   runs-on: self-hosted
   #   steps:
