@@ -28,7 +28,7 @@ spec:
                     - kind-kube-control-plane
       containers:
         - name: web
-          image: ghcr.io/harshpanchal18/electronic-e-commerce:835e704548125d7b0952efeeac9c2186ae4100ea
+          image: ghcr.io/harshpanchal18/electronic-e-commerce:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
