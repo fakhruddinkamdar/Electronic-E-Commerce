@@ -109,7 +109,7 @@
   <!-- Start Services -->
 
   <!-- Start Registration  -->
-  <?php include('userRegistration.php') ?>
+  <?php include('UserRegistration.php') ?>
   <!-- End Registration  -->
 
   <!-- Start Happy Customer  -->
