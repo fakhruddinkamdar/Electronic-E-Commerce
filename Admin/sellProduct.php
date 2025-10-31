@@ -50,7 +50,7 @@ if(isset($_REQUEST['psubmit'])) {
       session_start();
 
       $_SESSION['myid'] = $genid;
-      echo "<script> location.href='productsellsuccess.php'; </script>";
+      echo "<script> location.href='productSellSuccess.php'; </script>";
     }
 
     // Updating Assest data for available product after sell

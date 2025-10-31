@@ -48,7 +48,7 @@ include('../dbConnection.php');
       <td>'.$row["assign_tech"].'</td>
       <td>'.$row["assign_date"].'</td>
       <td>
-        <form action="viewassignwork.php" method="POST" class="d-inline">
+        <form action="viewAssignwork.php" method="POST" class="d-inline">
           <input type="hidden" name="id" value='. $row["request_id"] .'>
           <button type="submit" class="btn btn-warning" name="view" value="View">
             <i class="far fa-eye"></i>
