@@ -5,7 +5,7 @@ define('TITLE', 'Purchase');
 define('PAGE', 'Purchase');
 
 if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
-    header('Location: RequesterLogin.php');
+    header('Location: requesterLogin.php');
     exit();
 }
 

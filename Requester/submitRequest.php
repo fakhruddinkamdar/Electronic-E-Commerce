@@ -5,7 +5,7 @@ define('TITLE', 'Submit Request');
 define('PAGE', 'SubmitRequest');
 
 if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
-  header('Location: RequesterLogin.php');
+  header('Location: requesterLogin.php');
   exit();
 }
 
@@ -60,8 +60,8 @@ if(isset($_REQUEST['submitrequest'])) {
 
     $_SESSION['myid'] = $genid;
 
-    // echo "<script> location.href='submitrequestsuccess.php'; </script>";
-    // include('submitrequestsuccess.php');
+    // echo "<script> location.href='submitRequestSuccess.php'; </script>";
+    // include('submitRequestSuccess.php');
 
     } else {
       // below msg display on form submit failed

@@ -21,7 +21,7 @@
 <body>
   <!-- Top Navbar -->
   <nav class="navbar navbar-dark fixed-top bg-secondary flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 mr-0" href="RequesterProfile.php">Online Electronic Centre</a>
+    <a class="navbar-brand col-sm-3 mr-0" href="requesterProfile.php">Online Electronic Centre</a>
   </nav>
 
   <!-- Side Bar -->
@@ -33,32 +33,32 @@
           <ul class="nav flex-column">
 
             <li class="nav-item">
-              <a class="nav-link <?php if(PAGE == 'RequesterProfile') { echo 'active'; } ?>" href="RequesterProfile.php">
+              <a class="nav-link <?php if(PAGE == 'RequesterProfile') { echo 'active'; } ?>" href="requesterProfile.php">
               <i class="fas fa-user"></i> Profile
               <span class="sr-only">(current)</span>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link <?php if(PAGE == 'SubmitRequest') { echo 'active'; } ?>" href="SubmitRequest.php">
+              <a class="nav-link <?php if(PAGE == 'SubmitRequest') { echo 'active'; } ?>" href="submitRequest.php">
               <i class="fas fa-arrow-right"></i> Submit Request
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link <?php if(PAGE == 'Purchase') { echo 'active'; } ?>" href="Purchase.php">
+              <a class="nav-link <?php if(PAGE == 'Purchase') { echo 'active'; } ?>" href="purchase.php">
               <i class="fas fa-shopping-cart"></i> Purchase
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link <?php if(PAGE == 'CheckStatus') { echo 'active'; } ?>" href="CheckStatus.php">
+              <a class="nav-link <?php if(PAGE == 'CheckStatus') { echo 'active'; } ?>" href="checkStatus.php">
               <i class="fas fa-align-center"></i> Service Status
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link <?php if(PAGE == 'Requesterchangepass') { echo 'active'; } ?>" href="Requesterchangepass.php">
+              <a class="nav-link <?php if(PAGE == 'Requesterchangepass') { echo 'active'; } ?>" href="requesterChangePass.php">
               <i class="fas fa-key"></i> Change Password
               </a>
             </li>

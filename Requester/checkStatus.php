@@ -5,7 +5,7 @@ define('TITLE', 'Status');
 define('PAGE', 'CheckStatus');
 
 if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
-  header('Location: RequesterLogin.php');
+  header('Location: requesterLogin.php');
   exit();
 }
 
