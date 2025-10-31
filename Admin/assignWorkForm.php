@@ -1,11 +1,12 @@
 <?php
 if(session_id() == '') session_start();
 
-if(isset($_SESSION['is_adminlogin'])) {
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
 }
+
+$rEmail = $_SESSION['aEmail'];
 
 if(isset($_REQUEST['view'])) {
   $sql = "SELECT * FROM submitrequest_tb WHERE request_id = {$_REQUEST['id']}";

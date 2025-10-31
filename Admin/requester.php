@@ -1,17 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Requesters');
 define('PAGE', 'requesters');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])){
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 ?>
 
 <div class="col-sm-9 col-md-10 mt-2 text-center">
@@ -39,7 +41,7 @@ if(isset($_SESSION['is_adminlogin'])){
         echo '<td>'. $row["r_name"].'</td>';
         echo '<td>'.$row["r_email"].'</td>';
         echo '<td>
-                <form action="editreq.php" method="POST" class="d-inline">
+                <form action="editReq.php" method="POST" class="d-inline">
                   <input type="hidden" name="id" value='. $row["r_login_id"] .'>
                   <button type="submit" class="btn btn-info mr-3" name="view" value="View">
                     <i class="fas fa-pen"></i>
@@ -77,7 +79,7 @@ if(isset($_SESSION['is_adminlogin'])){
 
 </div>
 </div>
-<div><a class="btn btn-danger box" href="insertreq.php"><i class="fas fa-plus fa-2x"></i></a>
+<div><a class="btn btn-danger box" href="insertReq.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 </div>
 

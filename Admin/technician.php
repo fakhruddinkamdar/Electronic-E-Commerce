@@ -1,17 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Technician');
 define('PAGE', 'technician');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])){
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 ?>
 
 <div class="col-sm-9 col-md-10 mt-2 text-center">
@@ -42,7 +44,7 @@ if(isset($_SESSION['is_adminlogin'])){
           echo '<td>'.$row["empCity"].'</td>';
           echo '<td>'.$row["empMobile"].'</td>';
           echo '<td>'.$row["empEmail"].'</td>';
-          echo '<td><form action="editemp.php" method="POST" class="d-inline"> <input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-info mr-3" name="view" value="View"><i class="fas fa-pen"></i></button></form>  <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
+          echo '<td><form action="editEmp.php" method="POST" class="d-inline"> <input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-info mr-3" name="view" value="View"><i class="fas fa-pen"></i></button></form>  <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
           </tr>';
         }
 
@@ -66,7 +68,7 @@ if(isset($_SESSION['is_adminlogin'])){
       </div>
     </div>
 
-    <div><a class="btn btn-danger box" href="insertemp.php"><i class="fas fa-plus fa-2x"></i></a>
+    <div><a class="btn btn-danger box" href="insertEmp.php"><i class="fas fa-plus fa-2x"></i></a>
   </div>
 </div>
 

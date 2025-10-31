@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+README.md
+kubernetes/*.yml
+tests/
+*.log
+node_modules/
+vendor/

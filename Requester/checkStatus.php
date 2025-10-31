@@ -1,17 +1,18 @@
 <?php
+session_start();
+
 define('TITLE', 'Status');
 define('PAGE', 'CheckStatus');
+
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+  header('Location: requesterLogin.php');
+  exit();
+}
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if($_SESSION['is_login']){
-  $rEmail = $_SESSION['rEmail'];
-} else {
-  echo "<script> location.href='RequesterLogin.php'; </script>";
-}
+$rEmail = $_SESSION['rEmail'];
 ?>
 
 <div class="col-sm-6 mt-2 mx-3">

@@ -1,17 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Work Order');
 define('PAGE', 'work');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])){
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 ?>
 
 <div class="col-sm-9 col-md-10 mt-2">
@@ -46,7 +48,7 @@ if(isset($_SESSION['is_adminlogin'])){
       <td>'.$row["assign_tech"].'</td>
       <td>'.$row["assign_date"].'</td>
       <td>
-        <form action="viewassignwork.php" method="POST" class="d-inline">
+        <form action="viewAssignwork.php" method="POST" class="d-inline">
           <input type="hidden" name="id" value='. $row["request_id"] .'>
           <button type="submit" class="btn btn-warning" name="view" value="View">
             <i class="far fa-eye"></i>

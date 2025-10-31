@@ -1,18 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Change Password');
 define('PAGE', 'changepass');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$aEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])) {
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
-$aEmail = $_SESSION['aEmail'];
 
 if(isset($_REQUEST['passupdate'])) {
 
@@ -46,12 +47,12 @@ if(isset($_REQUEST['passupdate'])) {
 
         <div class="form-group">
           <label for="inputEmail">Email</label>
-          <input type="email" class="form-control" id="inputEmail" value=" <?php echo $aEmail ?>" readonly>
+          <input type="email" class="form-control" id="inputEmail" value=" <?php echo htmlspecialchars($aEmail) ?>" readonly>
         </div>
 
         <div class="form-group">
           <label for="inputnewpassword">New Password</label>
-          <input type="text" class="form-control" id="inputnewpassword" placeholder="New Password" name="aPassword">
+          <input type="password" class="form-control" id="inputnewpassword" placeholder="New Password" name="aPassword">
         </div>
 
         <button type="submit" class="btn btn-danger mr-4 mt-4" name="passupdate">Update</button>

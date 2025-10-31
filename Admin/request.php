@@ -1,17 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Requests');
 define('PAGE', 'request');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])){
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 ?>
 
 <div class="col-sm-4">
@@ -68,7 +70,7 @@ if(isset($_SESSION['is_adminlogin'])){
 </div> <!-- Main Content area End Middle -->
 
 <?php
-  include('assignworkform.php');
+  include('assignWorkForm.php');
   include('includes/footer.php');
   $conn->close();
 ?>

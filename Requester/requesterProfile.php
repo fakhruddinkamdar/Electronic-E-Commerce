@@ -1,17 +1,18 @@
 <?php
+session_start();
+
 define('TITLE', 'Requester Profile');
 define('PAGE', 'RequesterProfile');
 
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+    header('Location: requesterLogin.php');
+    exit();
+}
+
+$rEmail = $_SESSION['rEmail'];
+
 include('includes/header.php');
 include('../dbConnection.php');
-
-session_start();
-
-if($_SESSION['is_login']) {
-  $rEmail = $_SESSION['rEmail'];
-} else {
-  echo "<script> location.href='RequesterLogin.php'; </script>";
-}
 
 $sql = "SELECT * FROM requesterlogin_tb WHERE r_email='$rEmail'";
 $result = $conn->query($sql);
@@ -22,11 +23,11 @@ if($result->num_rows == 1) {
 }
 
 if(isset($_REQUEST['nameupdate'])) {
-  if($_REQUEST['rName'] == " " || empty($_REQUEST['rName'])) {
+  if(empty(trim($_REQUEST['rName']))) {
     // msg displayed if required field missing
     $passmsg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> All fields are mandatory... </div>';
   } else {
-    $rName = $_REQUEST["rName"];
+    $rName = trim($_REQUEST["rName"]);
     if($rName == "" || empty($rName)) {
       echo "Name Cannot be empty";
       die("dsf");
@@ -34,11 +35,9 @@ if(isset($_REQUEST['nameupdate'])) {
 
     $sql = "UPDATE requesterlogin_tb SET r_name = '$rName' WHERE r_email = '$rEmail'";
 
-    if($conn->query($sql) == TRUE) {
-      // below msg display on form submit success
+    if($conn->query($sql) == TRUE) { // on form submit success
       $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully... </div>';
-    } else {
-      // below msg display on form submit failed
+    } else { // on form submit failed
       $passmsg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Update! </div>';
     }
   }
@@ -73,13 +72,12 @@ if(isset($_REQUEST['nameupdate'])) {
 
 <script type="text/javascript">
   function blank() {
-	  var nm = document.getElementById('inputName').value;
+	  var nm = document.getElementById('inputName').value.trim();
 
-	  if(empty(nm) || nm == " " || nm == NULL) {
-        alert("Name cannot be blank");
-			  return false;
-	  } else {
-		    return true;
+	  if(!nm) {
+      alert("Name cannot be blank");
+      return false;
 	  }
+    return true;
   }
 </script>

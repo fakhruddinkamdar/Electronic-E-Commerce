@@ -1,17 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Assests');
 define('PAGE', 'assets');
+
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+  header('Location: index.php');
+  exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if(isset($_SESSION['is_adminlogin'])){
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 ?>
 
 <div class="col-sm-9 col-md-10 mt-2 text-center">
@@ -47,7 +49,7 @@ if(isset($_SESSION['is_adminlogin'])){
           <td>'.$row["poriginalcost"].'</td>
           <td>'.$row["psellingcost"].'</td>
           <td>
-            <form action="editproduct.php" method="POST" class="d-inline">
+            <form action="editProduct.php" method="POST" class="d-inline">
               <input type="hidden" name="id" value='. $row["pid"] .'>
               <button type="submit" class="btn btn-info" name="view" value="View">
               <i class="fas fa-pen"></i>
@@ -60,7 +62,7 @@ if(isset($_SESSION['is_adminlogin'])){
               <i class="far fa-trash-alt"></i></button>
             </form>
 
-            <form action="sellproduct.php" method="POST" class="d-inline">
+            <form action="sellProduct.php" method="POST" class="d-inline">
                 <input type="hidden" name="id" value='. $row["pid"] .'>
                 <button type="submit" class="btn btn-success" name="issue" value="Issue">
                 <i class="fas fa-handshake"></i></button>
@@ -90,7 +92,7 @@ if(isset($_SESSION['is_adminlogin'])){
 
     </div>
   </div>
-  <a class="btn btn-danger box" href="addproduct.php"><i class="fas fa-plus fa-2x"></i></a>
+  <a class="btn btn-danger box" href="addProduct.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 
 <?php include('includes/footer.php'); ?>

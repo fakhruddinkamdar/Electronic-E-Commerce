@@ -18,7 +18,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 
-<title>EH</title>
+<title>OSMS Electronics 💡</title>
 
 </head>
 
@@ -36,7 +36,7 @@
         <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 
         <li class="nav-item"><a href="#registration" class="nav-link">Registration</a></li>
-        <li class="nav-item"><a href="Requester/RequesterLogin.php" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="Requester/requesterLogin.php" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
       </ul>
     </div>

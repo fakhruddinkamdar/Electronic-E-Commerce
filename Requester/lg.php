@@ -1,18 +1,18 @@
 <?php
+session_start();
+
 define('TITLE', 'Purchase');
 define('PAGE', 'Purchase');
 
-include('includes/header.php');
-include('../dbConnection.php');
-
-session_start();
-
-if($_SESSION['is_login']) {
-	$rEmail = $_SESSION['rEmail'];
-} else {
-	echo "<script> location.href='RequesterLogin.php'; </script>";
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+	header('Location: requesterLogin.php');
+    exit();
 }
 
+$rEmail = $_SESSION['rEmail'];
+
+include('includes/header.php');
+include('../dbConnection.php');
 
 ?>
 <!--<div class="col-md-4">!-->

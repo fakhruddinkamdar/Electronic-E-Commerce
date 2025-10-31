@@ -17,7 +17,7 @@
         $_SESSION['rEmail'] = $rEmail;
 
         // Redirecting to RequesterProfile page on Correct Email and Pass
-        echo "<script> location.href='RequesterProfile.php'; </script>";
+        echo "<script> location.href='requesterProfile.php'; </script>";
         exit;
 
       } else {
@@ -26,7 +26,7 @@
 
     }
   } else {
-    echo "<script>location.href='RequesterProfile.php';</script>";
+    echo "<script>location.href='requesterProfile.php';</script>";
     session_destroy();
   }
 ?>

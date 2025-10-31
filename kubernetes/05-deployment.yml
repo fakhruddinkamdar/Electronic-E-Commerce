@@ -35,7 +35,7 @@ spec:
               name: http
           env:
             - name: DATABASE_HOST
-              value: mysql
+              value: ele-osms-mysql.ecommerce.svc.cluster.local
             - name: DB_PORT
               value: "3306"
             - name: DB_NAME
@@ -52,7 +52,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql-credentials
-                  key: MYSQL_PASSWORD
+                  key: MYSQL_ROOT_PASSWORD
           resources:
             requests:
               memory: "128Mi"
@@ -98,7 +98,7 @@ spec:
               name: http
           env:
             - name: PMA_HOST
-              value: localhost
+              value: mysql
             - name: PMA_USER
               valueFrom:
                 secretKeyRef:

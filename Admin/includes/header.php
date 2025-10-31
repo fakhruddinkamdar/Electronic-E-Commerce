@@ -40,7 +40,7 @@
                   </li>
 
                   <li class="nav-item">
-                     <a class="nav-link <?php if(PAGE == 'uploadproduct') { echo 'active'; } ?> " href="uploadproduct.php">
+                     <a class="nav-link <?php if(PAGE == 'uploadproduct') { echo 'active'; } ?> " href="uploadProduct.php">
                         <i class="fas fa-upload"></i> Upload Product</a>
                   </li>
 
@@ -75,17 +75,17 @@
                   </li>
 
                   <li class="nav-item">
-                  <a class="nav-link <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="soldproductreport.php">
+                  <a class="nav-link <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="soldProductReport.php">
                   <i class="fas fa-table"></i> Sell Report</a>
                   </li>
 
                   <li class="nav-item">
-                  <a class="nav-link <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="workreport.php">
+                  <a class="nav-link <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="workReport.php">
                   <i class="fas fa-table"></i> Work Report</a>
                   </li>
 
                   <li class="nav-item">
-                  <a class="nav-link <?php if(PAGE == 'changepass') { echo 'active'; } ?>" href="changepass.php">
+                  <a class="nav-link <?php if(PAGE == 'changepass') { echo 'active'; } ?>" href="changePass.php">
                   <i class="fas fa-key"></i> Change Password</a>
                   </li>
 

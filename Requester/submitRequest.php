@@ -1,17 +1,18 @@
 <?php
+session_start();
+
 define('TITLE', 'Submit Request');
 define('PAGE', 'SubmitRequest');
 
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+  header('Location: requesterLogin.php');
+  exit();
+}
+
+$rEmail = $_SESSION['rEmail'];
+
 include('includes/header.php');
 include('../dbConnection.php');
-
-session_start();
-
-if($_SESSION['is_login']) {
-  $rEmail = $_SESSION['rEmail'];
-} else {
-  echo "<script> location.href='RequesterLogin.php'; </script>";
-}
 
 if(isset($_REQUEST['submitrequest'])) {
 
@@ -59,8 +60,8 @@ if(isset($_REQUEST['submitrequest'])) {
 
     $_SESSION['myid'] = $genid;
 
-    // echo "<script> location.href='submitrequestsuccess.php'; </script>";
-    // include('submitrequestsuccess.php');
+    // echo "<script> location.href='submitRequestSuccess.php'; </script>";
+    // include('submitRequestSuccess.php');
 
     } else {
       // below msg display on form submit failed

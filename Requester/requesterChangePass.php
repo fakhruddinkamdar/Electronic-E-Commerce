@@ -1,19 +1,19 @@
 <?php
+session_start();
+
 define('TITLE', 'Change Password');
 define('PAGE', 'Requesterchangepass');
+
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+  header('Location: requesterLogin.php');
+  exit();
+}
 
 include('includes/header.php');
 include('../dbConnection.php');
 
-session_start();
-
-if($_SESSION['is_login']) {
-  $rEmail = $_SESSION['rEmail'];
-} else {
-  echo "<script> location.href='RequesterLogin.php'; </script>";
-}
-
 $rEmail = $_SESSION['rEmail'];
+
 if(isset($_REQUEST['passupdate'])) {
   if(($_REQUEST['rPassword'] == "")) {
     // msg displayed if required field missing
