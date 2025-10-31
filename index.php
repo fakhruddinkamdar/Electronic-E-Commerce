@@ -18,7 +18,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 
-<title>EH</title>
+<title>OSMS Electronics 💡</title>
 
 </head>
 
