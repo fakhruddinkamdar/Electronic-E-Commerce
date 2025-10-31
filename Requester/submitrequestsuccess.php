@@ -1,16 +1,17 @@
 <?php
+session_start();
+
 define('TITLE', 'Success');
+
+if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
+    header('Location: RequesterLogin.php');
+    exit();
+}
+
+$rEmail = $_SESSION['rEmail'];
 
 include('includes/header.php');
 include('../dbConnection.php');
-
-session_start();
-
-if($_SESSION['is_login']) {
-  $rEmail = $_SESSION['rEmail'];
-} else {
-  echo "<script> location.href='RequesterLogin.php'; </script>";
-}
 
 $sql = "SELECT * FROM submitrequest_tb WHERE request_id = {$_SESSION['myid']}";
 $result = $conn->query($sql);

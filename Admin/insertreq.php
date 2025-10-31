@@ -1,16 +1,18 @@
 <?php
+session_start();
+
 define('TITLE', 'Add New Requester');
 define('PAGE', 'requesters');
 
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
+
 include('includes/header.php');
 include('../dbConnection.php');
-
-session_start();
-if(isset($_SESSION['is_adminlogin'])) {
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 
 if(isset($_REQUEST['reqsubmit'])) {
 

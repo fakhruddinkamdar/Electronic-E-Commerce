@@ -2,14 +2,15 @@
 session_start();
 define('TITLE', 'Success');
 
+if (!isset($_SESSION['is_adminlogin']) || !$_SESSION['is_adminlogin']) {
+    header('Location: index.php');
+    exit();
+}
+
+$rEmail = $_SESSION['aEmail'];
+
 include('includes/header.php');
 include('../dbConnection.php');
-
-if(isset($_SESSION['is_adminlogin'])) {
-  $aEmail = $_SESSION['aEmail'];
-} else {
-  echo "<script> location.href='index.php'; </script>";
-}
 
 $sql = "SELECT * FROM customer_tb WHERE custid = {$_SESSION['myid']}";
 $result = $conn->query($sql);
